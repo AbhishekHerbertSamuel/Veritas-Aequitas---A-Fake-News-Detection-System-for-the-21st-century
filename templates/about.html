@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Veritas Aequitas - A Fake News Detection System</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="container mt-5">
+    <h2>About the Model:</h2>
+    <p>This page describes the methodology used in the fake news detection model.</p>
+    
+    <h3>Data Source:</h3>
+    <p>We have utilized the ISOT Fake News Dataset, which includes a total of 44,940 entries. This dataset is split into two parts: 21,417 entries in the True.csv file representing true news, and 23,523 entries in the Fake.csv file representing fake news.</p>
+
+    <h3>Scope of the Data:</h3>
+    <p>The data primarily covers international politics from the period 2016-2017 with a specific focus on the United States. This timeframe and geographical focus provide a rich dataset for understanding the dynamics of misinformation.</p>
+
+    <h3>Model Architecture:</h3>
+    <p>Our model employs the Multinomial Naive Bayes algorithm combined with a TF-IDF Vectorizer to classify news articles as 'true' or 'fake.' This method is well-suited for handling and analyzing text data and worked with 94% accuracy.</p>
+
+    <h3>Technology Stack:</h3>
+    <p>The back-end of our system is powered by Flask, a Python web framework. The front-end is built using HTML, CSS (enhanced with Bootstrap), and JavaScript, providing a responsive and user-friendly interface.</p>
+
+    <h3>Integration Method:</h3>
+    <p>The trained model is integrated with the front-end through the use of Pickle, a Python module that serializes and deserializes a Python object structure. This allows for the model to be easily loaded and utilized in the Flask application.</p>
+    
+    <p><a href="/">Return to the classifier</a></p>
+</div>
+</body>
+</html>

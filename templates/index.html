@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title> Veritas Aequitas - A Fake News Detection System</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+    </head>
+<body>
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Veritas Aequitas - Truth and Justice</h1>
+    <form action="/" method="post">
+        <div class="form-group">
+            <textarea name="news_text" rows="6" class="form-control" placeholder="Enter news text here...">{{ user_input_text }}</textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Classify News</button>
+    </form>
+    {% if prediction_text %}
+        <div class="alert {{ 'alert-success' if prediction_text == 'Real' else 'alert-danger' }} mt-3" role="alert">
+            Prediction: {{ prediction_text }}
+        </div>
+        
+
+    {% endif %}
+</div>
+<div class="transparent-container mt-3">
+    <div class="about-model-box">
+        <p class="text-center"><a href="/about" class="about-model-link">ABOUT THE MODEL</a></p>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    document.querySelector("form").onsubmit = function() {
+        var textArea = document.querySelector("textarea[name='news_text']");
+        if (textArea.value.trim() === "") {
+            alert("Please enter some text to classify.");
+            textArea.focus();
+            return false;
+        }
+        return true;
+    };
+</script>
+</body>
+</html>
+
+
+
+
+
+
