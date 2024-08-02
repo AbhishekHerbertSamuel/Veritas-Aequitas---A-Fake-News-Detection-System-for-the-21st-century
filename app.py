@@ -19,10 +19,12 @@ def index():
         else:
             prediction_text = 'Please enter some text to classify.'
     return render_template('index.html', prediction_text=prediction_text, user_input_text=user_input_text)
+
 @app.route('/about')
 def about():
     return render_template('about.html')  # You will create this about.html template
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0')
+
 
