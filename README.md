@@ -5,7 +5,6 @@
 4. You can click on the ‘About the Model’ button to learn more about the model we have used. Click on the ‘Return to the classifier’ option at the end of this page to return to the home page.
 5. Note: As of this time, our model works best with news items in the ISOT Fake News Dataset. 
 Download the Dataset here:
-True.csv- https://docs.google.com/spreadsheets/d/1_g4wRNTKDFECZuqQLxTp5UaiIcRQgzTvwYeo0fH
--u58/edit?usp=sharing
+True.csv- https://docs.google.com/spreadsheets/d/1_g4wRNTKDFECZuqQLxTp5UaiIcRQgzTvwYeo0fH-u58/edit?usp=sharing
 Fake.csv- https://docs.google.com/spreadsheets/d/1ge5yvQXsHXxCzQ7JsudF_6zVskw7G7aSS06YXC8 YdCI/edit?usp=sharing
  
